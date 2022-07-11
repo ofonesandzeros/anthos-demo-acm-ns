@@ -1,0 +1,15 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: hello-k8s
+spec:
+  # Since this is for a namespace repository, the format should be unstructured
+  sourceFormat: unstructured
+  git:
+    auth: none
+    branch: main
+    period: 15s
+    repo: https://github.com/ofonesandzeros/anthos-demo-acm-ns.git
+    revision: HEAD
+    secretRef: {}

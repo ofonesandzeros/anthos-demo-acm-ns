@@ -1,1 +1,0 @@
-# anthos-demo-acm-ns
